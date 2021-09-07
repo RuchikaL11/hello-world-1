@@ -17,11 +17,11 @@ pipeline {
                 [
                     artifactId: 'maven-project', 
                     classifier: '', 
-                    file: "webapp/target/webapp-${mavenPom.version}.war", 
+                    file: "webapp/target/webapp.war", 
                     type: 'war'
                 ]
             ], 
-            credentialsId: 'admin', 
+            credentialsId: 'nexus-creds', 
             groupId: 'com.example.maven-project', 
             nexusUrl: '54.161.184.91:8081', 
             nexusVersion: 'nexus3', 
